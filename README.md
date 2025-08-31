@@ -120,6 +120,8 @@ Body:
   "location": "Dhaka"
 }
 ```  
+#### View Companies all Job
+**GET** `/api/employer/jobs`
 
 #### Edit a Job
 **GET** `/api/employer/{id}/edit-job`  
@@ -130,17 +132,9 @@ Body:
 #### Delete a Job
 **DELETE** `/api/employer/{id}/delete-job`  
 
-#### View Companies all Job
-**GET** `/api/employer/jobs`
 
-#### View Applicants  a Job
-**GET** `/api/employer/applicants`  
 
-#### Accept Application  a Job
-**PATCH** `/employer/applicants/{id}/accept`  
 
-#### Reject Application  a Job
-**PATCH** `/employer/applicants/{id}/reject`  
 
 
 ---
@@ -163,6 +157,16 @@ Body (form-data):
 ```
 cv: (upload file.pdf/.doc/.docx)
 ```  
+### 🏢 Employer Endpoints  
+
+#### View Applicants  Job
+**GET** `/api/employer/applicants`  
+
+#### Accept Application
+**PATCH** `/employer/applicants/{id}/accept`  
+
+#### Reject Application
+**PATCH** `/employer/applicants/{id}/reject`
 
 ### 💳 Payments 
 
