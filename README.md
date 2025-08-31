@@ -219,7 +219,7 @@ cv: (upload file.pdf/.doc/.docx)
 
 ### Manage all Job
 #### View all Job 
-**GET** `/api/admin/jobs/{id}/edit`  
+**GET** `/api/admin/jobs`  
 
 #### Edit a Job
 **GET** `/api/admin/jobs/{id}/edit`  
