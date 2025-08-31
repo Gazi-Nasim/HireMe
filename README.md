@@ -242,7 +242,15 @@ cv: (upload file.pdf/.doc/.docx)
 **GET** `/api/admin/jobs?status=paid&company_id=5`  
 
 - `status` → `paid | active | inactive`  
-- `company_id` → Employer’s ID  
+- `company_id` → Employer’s ID 
+
+#### Company analytics
+**GET** `/api/admin/analytics` 
+
+#### Google analytics
+**GET** `/api/admin/google-analytics`  
+
+
 
 
 
