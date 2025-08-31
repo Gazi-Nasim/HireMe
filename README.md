@@ -71,6 +71,7 @@ Authorization: Bearer <your_token>
 ```
 
 ---
+## Follow to use postman
 
 ## 📡 API Endpoints  
 
@@ -108,6 +109,28 @@ Body:
 
 ---
 
+#### Login response look like this use the access token
+**POST** `/api/login`  
+Body:  
+```json
+{
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzU2NjMwNzA1LCJleHAiOjE3NTY2MzQzMDUsIm5iZiI6MTc1NjYzMDcwNSwianRpIjoiWlF1elZub0c4V3E2YndHSCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.GoALpUMO357YVOudTU3ObrKH3CVHqJ0TJXpQjJuIU8o",
+    "token_type": "bearer",
+    "expires_in": 3600,
+    "user": {
+        "id": 1,
+        "name": "Admin",
+        "email": "admin@gmail.com",
+        "role": "admin",
+        "email_verified_at": "2025-08-31T07:47:43.000000Z",
+        "created_at": "2025-08-31T07:47:43.000000Z",
+        "updated_at": "2025-08-31T07:47:43.000000Z"
+    }
+}
+```  
+
+---
+
 ### 🏢 Employer Endpoints  
 
 #### Post a Job  
@@ -131,11 +154,6 @@ Body:
 
 #### Delete a Job
 **DELETE** `/api/employer/{id}/delete-job`  
-
-
-
-
-
 
 ---
 ### 👨‍💼 Applicant/Joseeker Endpoints
