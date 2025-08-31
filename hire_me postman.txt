@@ -1,0 +1,162 @@
+Headers (for all requests)
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <token>   // required for protected routes
+
+Authentication
+Register
+
+POST /api/register
+Body (JSON):
+
+{
+  "name": "Admin",
+  "email": "admin@gmail.com",
+  "password": "12345678",
+  "role": "admin"
+}
+
+
+Success Response:
+
+{
+  "message": "User registered successfully",
+  "access_token": "<token>",
+  "token_type": "bearer",
+  "expires_in": 3600,
+  "user": {
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "id": 7,
+    "created_at": "2025-08-29T00:54:38.000000Z",
+    "updated_at": "2025-08-29T00:54:38.000000Z"
+  }
+}
+
+
+Error Response:
+
+{
+  "status": "error",
+  "message": "The email has already been taken."
+}
+
+Login
+
+POST /api/login
+Body (JSON):
+
+{
+  "email": "admin@gmail.com",
+  "password": "12345678"
+}
+
+
+Success Response:
+
+{
+  "access_token": "<token>",
+  "token_type": "bearer",
+  "expires_in": 3600,
+  "user": {
+    "id": 7,
+    "name": "Admin",
+    "email": "admin@gmail.com"
+  }
+}
+
+Employer Endpoints
+Post a Job
+
+POST /api/employer/post-job
+Body (JSON):
+
+{
+  "title": "Frontend Developer",
+  "description": "React + Redux experience required",
+  "salary": "50000",
+  "location": "Dhaka"
+}
+
+Edit a Job
+
+GET /api/employer/{id}/edit-job
+Example: /api/employer/4/edit-job
+
+Update a Job
+
+PUT /api/employer/{id}/update-job
+Body (JSON):
+
+{
+  "title": "Frontend Developer Updated",
+  "description": "React + Redux + TypeScript",
+  "salary": "60000",
+  "location": "Dhaka"
+}
+
+Delete a Job
+
+DELETE /api/employer/{id}/delete-job
+
+View Applicants
+GET /api/employer/applicants
+
+Accept an Application
+PATCH /api/employer/application/{id}/accept
+
+Reject an Application
+PATCH /api/employer/application/{id}/reject
+
+Jobseeker Endpoints
+See a Job
+
+GET /api/jobseeker/jobs/{id}/see-job
+
+Apply for a Job
+
+POST /api/jobseeker/jobs/{id}/apply
+Body (JSON):
+
+{
+  "cv": "path/to/cv.pdf"
+}
+
+View Your Applications
+
+GET /api/jobseeker/applications
+
+Admin Endpoints
+Manage Users
+
+GET /api/admin/users
+
+GET /api/admin/users/{id}/edit
+
+PUT /api/admin/users/{id}/update
+
+DELETE /api/admin/users/{id}/delete
+
+Manage Jobs
+
+GET /api/admin/jobs
+
+GET /api/admin/jobs/{id}/edit
+
+PUT /api/admin/jobs/{id}/update
+
+DELETE /api/admin/jobs/{id}/delete
+
+View Analytics
+
+GET /api/admin/analytics
+
+View All Applications
+
+GET /api/admin/applications
+
+Filter by Status or Company:
+
+GET /api/admin/applications?status=accepted&company_id=5
+
+GET /api/admin/all-job?status=active&company_id=1
