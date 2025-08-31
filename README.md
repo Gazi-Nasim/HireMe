@@ -147,7 +147,7 @@ Body:
 **GET** `/api/jobseeker/jobs`  
 
 #### View a job
-**GET** `/api/jobseeker/jobs/{id}/see`  
+**GET** `/api/jobseeker/jobs/{id}/view`  
 
 
 ####  Apply for a job  
