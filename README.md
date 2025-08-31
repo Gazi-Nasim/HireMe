@@ -186,10 +186,10 @@ cv: (upload file.pdf/.doc/.docx)
 **GET** `/api/employer/applicants`  
 
 #### Accept Application
-**PATCH** `/employer/applicants/{id}/accept`  
+**PATCH** `api/employer/applications/{id}/accept`  
 
 #### Reject Application
-**PATCH** `/employer/applicants/{id}/reject`
+**PATCH** `api/employer/applications/{id}/reject`
 
 
 ### 🏢 Admin Endpoints 
