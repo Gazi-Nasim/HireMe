@@ -116,7 +116,8 @@ Body:
 {
   "title": "Frontend Developer",
   "description": "React & Laravel experience required",
-  "salary": "50000"
+  "salary_range": "50000",
+  "location": "Dhaka"
 }
 ```  
 
