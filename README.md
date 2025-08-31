@@ -157,16 +157,6 @@ Body (form-data):
 ```
 cv: (upload file.pdf/.doc/.docx)
 ```  
-### 🏢 Employer Endpoints  
-
-#### View Applicants  Job
-**GET** `/api/employer/applicants`  
-
-#### Accept Application
-**PATCH** `/employer/applicants/{id}/accept`  
-
-#### Reject Application
-**PATCH** `/employer/applicants/{id}/reject`
 
 ### 💳 Payments 
 
@@ -190,6 +180,18 @@ cv: (upload file.pdf/.doc/.docx)
 
 
 ---
+### 🏢 Employer Endpoints  
+
+#### View Applicants  Job
+**GET** `/api/employer/applicants`  
+
+#### Accept Application
+**PATCH** `/employer/applicants/{id}/accept`  
+
+#### Reject Application
+**PATCH** `/employer/applicants/{id}/reject`
+
+
 ### 🏢 Admin Endpoints 
 
 ### Manage all User
