@@ -12,6 +12,7 @@ This project allows **users** to register and apply for jobs, while **employers*
 - 🏢 **Admin Management** – Manage all users (create/update/delete), manage jobs, see company analytics
                             -View all users, jobs, applications
                             -Filter by company or status
+                            -Google analytics for page traffic
 - 🏢 **Employer Management** – Post/edit/delete jobs for their company, view applicants, accept/reject them
                             -View applications to their jobs
                             -Accept or reject applications

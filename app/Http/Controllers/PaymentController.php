@@ -81,7 +81,7 @@ class PaymentController extends Controller
         $application_id = $ids[3];
 
         $application = Application::find($application_id);
-        $application->status = 'paid';
+        $application->status ='paid';
         $application->save();
 
         $payment = Payment::create([
