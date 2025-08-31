@@ -35,12 +35,18 @@ class AdminController extends Controller
             return response()->json(['error' => 'User not found'], 404);
         }
 
-        User::where('id', $id)->update([
-            'name' => request('name'),
-            'email' => request('email'),
-            'role' => request('role'),
-            'password' => request('password'),
-        ]);
+        $user->fill($request->only([
+            'name',
+            'password'
+        ]));
+        $user->save();
+
+        // User::where('id', $id)->update([
+        //     'name' => request('name'),
+        //     'email' => request('email'),
+        //     'role' => request('role'),
+        //     'password' => request('password'),
+        // ]);
         return response()->json(['user' => $user]);
     }
 
