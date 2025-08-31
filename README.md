@@ -204,7 +204,14 @@ cv: (upload file.pdf/.doc/.docx)
 
 #### Update a User
 **PUT** `/api/admin/users/{id}/update`
-
+**can not update email address**
+```json
+    {
+    "name": "Job Seeker updated",
+    "role": "jobseeker",
+    "password": "12345678"
+    }
+    ```
 #### Delete a User
 **DELETE** `/api/admin/users/{id}/delete`
 
